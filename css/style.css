@@ -1,0 +1,19 @@
+body {
+  background-color: #DBDAD5;
+}
+
+header {
+  height: 150px;
+  background-color: #019689;
+  border-bottom: 2px solid #00b5a5;
+}
+
+.left_column {
+  background-color: #3cee45;
+  border-radius: 2px;
+}
+
+.right_column {
+  background-color: #f4ee45;
+  border-radius: 2px;
+}
