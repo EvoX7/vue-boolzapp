@@ -70,8 +70,8 @@
                   aria-describedby="inputGroup-sizing-sm ">
               </div>
             </div>
-            <!-- * Users list  -->
 
+            <!-- * Users list  -->
             <div class="container-fluid users_list g-0">
               <div class="row">
                 <div class="col-12">
@@ -80,12 +80,16 @@
                       :class="{active_user: index === activeIndex}" @click="selActiveIndex(index)">
 
                       <div id="user_tab">
-                        <img class="avatar_imgs ms-2" :src="imgPath(index)" />
+                        <img class="avatar_imgs ms-2" src="./img/avatar_2.jpg" />
                         <span class="fs-5 ms-3">{{ contact.name }}</span>
                         <span class="subtext">12.00</span>
                         <p class="subtext lineheight ms-3">Ultimo messaggio inviato</p>
                       </div>
                     <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    
                     </li>
                   </ul>
                 </div>
