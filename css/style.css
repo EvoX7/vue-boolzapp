@@ -39,7 +39,6 @@ header {
 
 /* ?Left column  */
 .left_column {
-  height: 800px;
   background-color: #3cee45;
   margin-bottom: 20px;
   border-radius: 2px 0px 0px 2px;
@@ -99,9 +98,6 @@ header {
   color: rgb(255, 255, 255);
 }
 
-.d {
-  /* display: inline-block;--------------------------------- */
-}
 
 /* Search bar tab  */
 #search_bar {
@@ -124,7 +120,8 @@ header {
 /* Main chat  */
 #main_chat {
   height: 680px;
-  background-color: rgb(255, 148, 148);
+  background: url("../img/mine.jpg");
+  overflow-y: scroll;
 }
 
 /* Main chat footer  */
@@ -133,6 +130,13 @@ header {
   align-items: center;
   justify-content: space-evenly;
   background-color: #F3EDEC;
+}
+
+/* User list  */
+#users_list {
+  background-color: red;
+  height: 500px;
+  overflow-y: scroll;
 
 }
 
