@@ -33,14 +33,17 @@
         <div class="row g-0">
 
           <!-- ?Left column  -->
-          <div class="col-lg-4 left_column">
+          <div class="col-4 left_column">
+
             <!-- Current user  -->
             <div class="mainchat_users">
+
               <!-- Left side  -->
               <div>
                 <img class="avatar_imgs ms-2" src="./img/avatar_io.jpg" alt="sofia">
                 <span class="fs-5">Sofia</span>
               </div>
+
               <!-- Upper icons left  -->
               <div>
                 <span><i class="icons fa-solid fa-circle-notch"></i></span>
@@ -57,7 +60,6 @@
               </div>
             </div>
 
-
             <!-- Search user/chat  -->
             <div id="search_bar">
               <div class="input-group input-group-sm">
@@ -72,22 +74,24 @@
             <!-- * Users list  -->
             <div class="" id="users_list">
               <ul class="list-group rounded-0">
-                <li class="list-group-item" v-for="(contact,index) in contacts">
+                <li class="list-group-item" v-for="(contact,index) in contacts":class="{active_user: index === activeIndex}" @click="SelActiveIndex(index)">
 
-                  <img class="avatar_imgs ms-2" :src="'/img/avatar' + contacts.avatar + '.jpg'" :alt="contacts.avatar"/>
-
-                  <span class="fs-5">{{ contacts.name }}</span>
-
+                  <img class="avatar_imgs ms-2" :src="'/img/avatar' + contacts.avatar + '.jpg'"
+                    :alt="contacts.avatar" />
+                  <span class="fs-5">{{ contact.name }}</span>
+                  <p class=" subtext">Attiva notifiche desktop</p>
+                <li></li>
                 </li>
               </ul>
-              
 
-        
+
+
             </div>
 
           </div>
           <!-- ! Right column  -->
-          <div class="col-lg-8 right_column">
+          <div class="col-8 right_column">
+            <div>
             <div class="mainchat_users">
               <!-- Right side  -->
               <div class="border-start border-2">
@@ -118,6 +122,7 @@
               <span><i class="icons_2 fa-solid fa-microphone"></i></span>
             </div>
           </div>
+        </div>
         </div>
       </div>
 

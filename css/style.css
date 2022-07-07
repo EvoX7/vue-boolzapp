@@ -39,7 +39,7 @@ header {
 
 /* ?Left column  */
 .left_column {
-  background-color: #3cee45;
+  background-color: white;
   border-radius: 2px 0px 0px 2px;
 }
 
@@ -118,7 +118,7 @@ header {
 
 /* Main chat  */
 #main_chat {
-  height: 680px;
+  height: 952px;
   background: url("../img/mine.jpg");
   overflow-y: scroll;
 }
@@ -129,11 +129,15 @@ header {
   align-items: center;
   justify-content: space-evenly;
   background-color: #F3EDEC;
+  padding-bottom: 3px;
 }
 
 /* User list  */
 #users_list {
   overflow-y: scroll;
-
 }
 
+/* Selected user */
+.active_user {
+  background-color: #f3f3f3;
+}
