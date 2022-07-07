@@ -34,13 +34,13 @@
           <!-- ?Left column  -->
           <div class="col-lg-4 left_column">
             <!-- Current user  -->
-            <div id="current_user">
+            <div class="mainchat_users">
               <!-- Left side  -->
               <div>
                 <img class="avatar_imgs" src="./img/avatar_io.jpg" alt="sofia">
                 <span class="fs-5">Sofia</span>
               </div>
-              <!-- Upper icons  -->
+              <!-- Upper icons left  -->
               <div>
                 <span><i class="icons fa-solid fa-circle-notch"></i></span>
                 <span><i class="icons fa-solid fa-message"></i></span>
@@ -49,11 +49,23 @@
             </div>
             <!-- User notifications  -->
             <div id="notifications">
+              <div id="bell"><i class="fa-solid fa-bell-slash"></i></div>
 
+              <div class="d"><span class="fs-6">Ricevi notifiche di nuovi messaggi</span>
+                <p class="text-decoration-underline subtext">Attiva notifiche desktop</p>
+              </div>
             </div>
+
 
             <!-- Search user/chat  -->
             <div id="search_bar">
+              <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="bg-white input-group-text rounded-0"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Small"
+                  aria-describedby="inputGroup-sizing-sm ">
+              </div>
 
             </div>
             <!-- Users list  -->
@@ -61,21 +73,41 @@
 
             </div>
 
-
-
-
-
-
-
           </div>
           <!-- !Right column  -->
           <div class="col-lg-8 right_column">
+            <div class="mainchat_users">
+              <!-- Right side  -->
+              <div>
+                <img class="avatar_imgs" src="./img/avatar_1.jpg" alt="michele">
+                <span class="fs-5 ms-1">Michele</span>
+              </div>
+              <!-- Upper icons right  -->
+              <div>
+                <span><i class="icons fa-solid fa-magnifying-glass"></i></i></span>
+                <span><i class="icons fa-solid fa-paperclip"></i></span>
+                <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
+              </div>
+            </div>
+            <!-- Main chat  -->
+            <div id="main_chat">
 
+            </div>
+
+            <!-- Main chat footer  -->
+            <div id="mchat-footer">
+              <span><i class="icons_2 fa-regular fa-face-smile"></i></span>
+              <div class="input-group p-2 w-75 ">
+                <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un nuovo messaggio"
+                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <span><i class="icons_2 fa-solid fa-microphone"></i></span>
+            </div>
           </div>
         </div>
       </div>
-    </main>
 
+    </main>
   </section>
 
   <!-- JS src  -->
