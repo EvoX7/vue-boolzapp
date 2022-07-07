@@ -30,14 +30,15 @@
     </header>
     <main>
       <div class="container ms_container">
-        <div class="row">
+        <div class="row g-0">
+
           <!-- ?Left column  -->
           <div class="col-lg-4 left_column">
             <!-- Current user  -->
             <div class="mainchat_users">
               <!-- Left side  -->
               <div>
-                <img class="avatar_imgs" src="./img/avatar_io.jpg" alt="sofia">
+                <img class="avatar_imgs ms-2" src="./img/avatar_io.jpg" alt="sofia">
                 <span class="fs-5">Sofia</span>
               </div>
               <!-- Upper icons left  -->
@@ -68,20 +69,31 @@
               </div>
 
             </div>
-            <!-- Users list  -->
-            <div class="avatars" id="users_list">
-            
+            <!-- * Users list  -->
+            <div class="" id="users_list">
+              <ul class="list-group rounded-0">
+                <li class="list-group-item" v-for="(contact,index) in contacts">
 
+                  <img class="avatar_imgs ms-2" :src="'/img/avatar' + contacts.avatar + '.jpg'" :alt="contacts.avatar"/>
 
+                  <span class="fs-5">{{ contacts.name }}</span>
+
+                </li>
+              </ul>
+              
+
+        
             </div>
 
           </div>
-          <!-- !Right column  -->
+          <!-- ! Right column  -->
           <div class="col-lg-8 right_column">
             <div class="mainchat_users">
               <!-- Right side  -->
-              <div>
-                <img class="avatar_imgs" src="./img/avatar_1.jpg" alt="michele">
+              <div class="border-start border-2">
+                <img class="avatar_imgs ms-2" src="./img/avatar_1.jpg" alt="michele">
+
+
                 <span class="fs-5 ms-1">Michele</span>
               </div>
               <!-- Upper icons right  -->
@@ -100,7 +112,7 @@
             <div id="mchat-footer">
               <span><i class="icons_2 fa-regular fa-face-smile"></i></span>
               <div class="input-group p-2 w-75 ">
-                <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un nuovo messaggio"
+                <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un messaggio"
                   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
               </div>
               <span><i class="icons_2 fa-solid fa-microphone"></i></span>
