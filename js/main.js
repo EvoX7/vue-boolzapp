@@ -166,11 +166,10 @@ const app = new Vue({
       }
     ]
   },
+
   methods: {
-    SelActiveIndex: function (index){
+    selActiveIndex: function (index){
       this.activeIndex = index;
-
-
     }
 
   }
