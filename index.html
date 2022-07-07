@@ -56,9 +56,9 @@
               <div id="bell"><i class="fa-solid fa-bell-slash"></i></div>
 
               <div class="d"><span class="fs-6">Ricevi notifiche di nuovi messaggi</span>
-                <p class="text-decoration-underline subtext">Attiva notifiche desktop</p>
+                <p><a class="text-black-50" href="/#">Attiva notifiche desktop</a></p>
               </div>
-            </div>
+            </div>  
 
             <!-- Search user/chat  -->
             <div id="search_bar">
@@ -69,20 +69,28 @@
                 <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Small"
                   aria-describedby="inputGroup-sizing-sm ">
               </div>
-
             </div>
             <!-- * Users list  -->
-            <div class="" id="users_list">
-              <ul class="list-group rounded-0">
-                <li class="list-group-item" v-for="(contact,index) in contacts":class="{active_user: index === activeIndex}" @click="SelActiveIndex(index)">
 
-                  <img class="avatar_imgs ms-2" :src="'/img/avatar' + contacts.avatar + '.jpg'"
-                    :alt="contacts.avatar" />
-                  <span class="fs-5">{{ contact.name }}</span>
-                  <p class=" subtext">Attiva notifiche desktop</p>
-                <li></li>
-                </li>
-              </ul>
+            <div class="container-fluid users_list g-0">
+              <div class="row">
+                <div class="col-12">
+                  <ul class="list-group rounded-0">
+                    <li class="list-group-item border-0 border-bottom" v-for="(contact,index) in contacts"
+                      :class="{active_user: index === activeIndex}" @click="selActiveIndex(index)">
+
+                      <div id="user_tab">
+                        <img class="avatar_imgs ms-2" :src="imgPath(index)" />
+                        <span class="fs-5 ms-3">{{ contact.name }}</span>
+                        <span class="subtext">12.00</span>
+                        <p class="subtext lineheight ms-3">Ultimo messaggio inviato</p>
+                      </div>
+                    <li></li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
 
 
 
@@ -92,37 +100,37 @@
           <!-- ! Right column  -->
           <div class="col-8 right_column">
             <div>
-            <div class="mainchat_users">
-              <!-- Right side  -->
-              <div class="border-start border-2">
-                <img class="avatar_imgs ms-2" src="./img/avatar_1.jpg" alt="michele">
+              <div class="mainchat_users">
 
-
-                <span class="fs-5 ms-1">Michele</span>
+                <!-- Right side  -->
+                <div class="right-top">
+                  <img class="avatar_imgs ms-2" src="./img/avatar_1.jpg" alt="michele">
+                  <span class="fs-5 ms-4">Michele</span>
+                  <p class="subtext lineheight ms-4">Ultimo messaggio inviato oggi alle 12.00</p>
+                </div>
+                <!-- Upper icons right  -->
+                <div>
+                  <span><i class="icons fa-solid fa-magnifying-glass"></i></i></span>
+                  <span><i class="icons fa-solid fa-paperclip"></i></span>
+                  <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
               </div>
-              <!-- Upper icons right  -->
-              <div>
-                <span><i class="icons fa-solid fa-magnifying-glass"></i></i></span>
-                <span><i class="icons fa-solid fa-paperclip"></i></span>
-                <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
-              </div>
-            </div>
-            <!-- Main chat  -->
-            <div id="main_chat">
+              <!-- Main chat  -->
+              <div id="main_chat">
 
-            </div>
-
-            <!-- Main chat footer  -->
-            <div id="mchat-footer">
-              <span><i class="icons_2 fa-regular fa-face-smile"></i></span>
-              <div class="input-group p-2 w-75 ">
-                <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un messaggio"
-                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
               </div>
-              <span><i class="icons_2 fa-solid fa-microphone"></i></span>
+
+              <!-- Main chat footer  -->
+              <div id="mchat-footer">
+                <span><i class="icons_2 fa-regular fa-face-smile"></i></span>
+                <div class="input-group p-2 w-75 ">
+                  <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un messaggio"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <span><i class="icons_2 fa-solid fa-microphone"></i></span>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 
