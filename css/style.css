@@ -95,7 +95,7 @@ header {
 
 .subtext {
   font-size: 12px;
-  color: rgb(255, 255, 255);
+  color: rgb(126, 126, 126);
 }
 
 
@@ -118,7 +118,7 @@ header {
 
 /* Main chat  */
 #main_chat {
-  height: 952px;
+  height: 1000px;
   background: url("../img/mine.jpg");
   overflow-y: scroll;
 }
@@ -133,11 +133,18 @@ header {
 }
 
 /* User list  */
-#users_list {
+.users_list {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* Selected user */
 .active_user {
   background-color: #f3f3f3;
+}
+
+.lineheight {
+  position: relative;
+  bottom:20px;
+  left: 63px;
 }
