@@ -34,6 +34,7 @@ header {
 .ms_container {
   position: relative;
   bottom: 120px;
+  height:100%;
 }
 
 
@@ -74,8 +75,14 @@ header {
 
 /* Notifications tab  */
 #notifications {
+  padding-top: 20px;
   background-color: #8EDAFD;
-  padding: 20px;
+}
+
+.bell-text {
+  position: relative;
+  left: 50px;
+  bottom: 40px;
 }
 
 #bell {
@@ -116,9 +123,14 @@ header {
   border-radius: 0px 2px 2px 0px;
 }
 
+.right-top {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Main chat  */
 #main_chat {
-  height: 1000px;
+  height: 109vh;
   background: url("../img/mine.jpg");
   overflow-y: scroll;
 }
@@ -145,6 +157,6 @@ header {
 
 .lineheight {
   position: relative;
-  bottom:20px;
+  bottom: 20px;
   left: 63px;
 }
