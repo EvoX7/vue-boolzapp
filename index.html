@@ -53,12 +53,11 @@
             </div>
             <!-- User notifications  -->
             <div id="notifications">
-              <div id="bell"><i class="fa-solid fa-bell-slash"></i></div>
+              <div id="bell" class="ms-4 mt-2"><i class="fa-solid fa-bell-slash"></i></div>
+              <span class="fs-6 bell-text ms-5">Ricevi notifiche di nuovi messaggi</span>
+              <p class="bell-text ms-5"><a class="text-black-50" href="/#">Attiva notifiche desktop</a></p>
 
-              <div class="d"><span class="fs-6">Ricevi notifiche di nuovi messaggi</span>
-                <p><a class="text-black-50" href="/#">Attiva notifiche desktop</a></p>
-              </div>
-            </div>  
+            </div>
 
             <!-- Search user / chat  -->
             <div id="search_bar">
@@ -76,20 +75,20 @@
               <div class="row">
                 <div class="col-12">
                   <ul class="list-group rounded-0">
-                    <li class="list-group-item border-0 border-bottom" v-for="(contact,index) in contacts"
-                      :class="{active_user: index === activeIndex}" @click="selActiveIndex(index)">
-
+                    <li class="list-group-item border-0 border-bottom" v-for="(contact,index) in contacts">
                       <div id="user_tab">
-                        <img class="avatar_imgs ms-2" src="./img/avatar_2.jpg" />
+                        <img class="avatar_imgs ms-2" :src="getImg()" />
                         <span class="fs-5 ms-3">{{ contact.name }}</span>
-                        <span class="subtext">12.00</span>
-                        <p class="subtext lineheight ms-3">Ultimo messaggio inviato</p>
+                        <span class="subtext ">12.00</span>
+                        <p class="subtext lineheight  ms-3">Ultimo messaggio inviato</p>
                       </div>
+
+                    <li></li>
+
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li></li>
-                    
+
                     </li>
                   </ul>
                 </div>
@@ -109,12 +108,14 @@
                 <!-- Right side  -->
                 <div class="right-top">
                   <img class="avatar_imgs ms-2" src="./img/avatar_1.jpg" alt="michele">
-                  <span class="fs-5 ms-4">Michele</span>
-                  <p class="subtext lineheight ms-4">Ultimo messaggio inviato oggi alle 12.00</p>
+                  <div class="d-flex flex-column">
+                    <span class="fs-5 lh ms-4">Michele</span>
+                    <p class="subtext ms-4">Ultimo messaggio inviato oggi alle 12.00</p>
+                  </div>
                 </div>
                 <!-- Upper icons right  -->
-                <div>
-                  <span><i class="icons fa-solid fa-magnifying-glass"></i></i></span>
+                <div class="mb-3">
+                  <span><i class="icons fa-solid fa-magnifying-glass"></i></span>
                   <span><i class="icons fa-solid fa-paperclip"></i></span>
                   <span><i class="icons fa-solid fa-ellipsis-vertical"></i></span>
                 </div>
