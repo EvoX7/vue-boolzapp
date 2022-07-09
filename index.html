@@ -10,9 +10,7 @@
   <!-- Link CSS  -->
   <link rel="stylesheet" href="./css/style.css">
   <!-- Font Awesome  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Vue JS  -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <title>Boolzapp</title>
@@ -65,8 +63,7 @@
                 <div class="input-group-prepend">
                   <span class="bg-white input-group-text rounded-0"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Small"
-                  aria-describedby="inputGroup-sizing-sm ">
+                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Small" aria-describedby="inputGroup-sizing-sm ">
               </div>
             </div>
 
@@ -75,8 +72,7 @@
               <div class="row">
                 <div class="col-12">
                   <ul class="list-group rounded-0">
-                    <li class="list-group-item border-0 border-bottom li_chat" v-for="(contact,index) in contacts"
-                      :class="{active_contact: index === activeIndex}" @click="selectedActiveIndex(index)">
+                    <li class="list-group-item border-0 border-bottom li_chat" v-for="(contact,index) in contacts" :class="{active_contact: index === activeIndex}" @click="selectedActiveIndex(index)">
                       <img class="avatar_imgs ms-2" :src="getImg(index)" />
                       <div id="user_tab">
                         <span class="fs-5 ms-3">{{ contact.name }}</span>
@@ -114,35 +110,20 @@
               </div>
               <!-- Main chat  -->
               <div id="main_chat_container">
-                <div class="container">
-                  <div class="row" v-for="(message,index) in contacts[activeIndex].messages">
-                    <div id="contact_col" class="col-6">
-                      <div id="received" class="msg_template p-3" :class="message.status">
-                        <h6 class="text-start">{{ message.message }}</h6>
-                        <div class="date-msg">
-                          <span id="date">{{ message.date }}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="owner_col" class="col-6">
-                      <div id="sent" class="msg_template p-3" :class="message.status">
-                        <h6 class="text-start">{{ message.message }}</h6>
-                        <div class="date-msg">
-                          <span id="date">{{ message.date }}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div v-for="message in contacts[activeIndex].messages">
+                  <span class="msg_template" :class="(message.status === 'received') ? 'received' : 'sent'">
+                    {{ message.message }}
 
+                  </span>
+
+                </div>
               </div>
 
               <!-- Main chat footer  -->
               <div id="mchat-footer">
                 <span><i class="icons_2 fa-regular fa-face-smile"></i></span>
                 <div class="input-group p-2 w-75 ">
-                  <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un messaggio"
-                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" class="form-control  p-2 rounded-1" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <span><i class="icons_2 fa-solid fa-microphone"></i></span>
               </div>
