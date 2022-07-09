@@ -168,16 +168,13 @@ const app = new Vue({
   },
 
   methods: {
-    selActiveIndex: function (index){
-      this.activeIndex = index;
+    selectedActiveIndex: function (newindex){
+      this.activeIndex = newindex;
     },
 
-    getImg: function (){
-      return "./img/avatar" + this.contacts[this.activeIndex].avatar;
-
+    getImg: function (index){
+      return "./img/avatar" + this.contacts[index].avatar;
     },
-
-
 
   }
 
