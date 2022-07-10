@@ -2,6 +2,7 @@ const app = new Vue({
   el: "#app",
   data: {
     activeIndex: 0,
+    newMsg: "",
     contacts: [
       {
         name: 'Michele',
@@ -166,18 +167,34 @@ const app = new Vue({
       }
     ]
   },
-
   methods: {
-    selectedActiveIndex: function (newindex){
-      this.activeIndex = newindex;
-    },
 
-    getImg: function (index){
+    // Getting avatar images 
+    getImg: function (index) {
       return "./img/avatar" + this.contacts[index].avatar;
     },
 
-  }
 
+    // Selecting active contacts
+    selectedActiveIndex: function (newindex) {
+      this.activeIndex = newindex;
+    },
+
+    // * Add new message
+    addNewMsg: function () {
+      if (this.newMsg != "") {
+
+        let inputMsg = {
+          message: this.newMsg,
+          status: 'sent'
+        }
+
+        this.contacts[this.activeIndex].messages.push(inputMsg);
+        this.newMsg = "";
+        console.log("New message added!");
+      }
+    }
+  }
 });
 
 
