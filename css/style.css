@@ -155,9 +155,17 @@ header {
 
 }
 
+#msg-date {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #B2B0B2;
+}
 
 /** Messages dispalyed in chat  */
 .msg_template {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 20px;

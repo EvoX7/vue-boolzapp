@@ -167,6 +167,7 @@ const app = new Vue({
       }
     ]
   },
+
   methods: {
 
     // Getting avatar images 
@@ -180,21 +181,47 @@ const app = new Vue({
       this.activeIndex = newindex;
     },
 
+
+
     // * Add new message
     addNewMsg: function () {
       if (this.newMsg != "") {
 
         let inputMsg = {
+          date: this.now(),
           message: this.newMsg,
           status: 'sent'
         }
 
         this.contacts[this.activeIndex].messages.push(inputMsg);
+        this.autoResponse(this.newMsg);
         this.newMsg = "";
         console.log("New message added!");
       }
-    }
+    },
+
+    // ?Auto response 
+    autoResponse: function (autoMessage) {
+      setTimeout(() => {
+        let messageMatic = {
+          date: this.now(),
+          message: "Ok , va bene",
+          status: 'received',
+        }
+        this.contacts[this.activeIndex].messages.push(messageMatic)
+
+      }, 1000);
+    },
+
+    // Date function 
+    now() {
+      return moment().format("HH:mm");
+    },
+
+
   }
+
+
 });
 
 
